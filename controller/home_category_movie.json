@@ -1,0 +1,57 @@
+[
+    {
+      "movie_name": "Hereditary",
+      "movie_category": "Horror",
+      "movie_description": "A grieving family grapples with the psychological terrors after the death of their matriarch.",
+      "movie_pic": "https://imageio.forbes.com/blogs-images/darrynking/files/2018/06/HEREDITARY_PAYOFF_FINISH_V5-1200x1778.jpg?height=1053&width=711&fit=bounds"
+    },
+    {
+      "movie_name": "Get Out",
+      "movie_category": "Horror",
+      "movie_description": "A Black man visits his white girlfriend's parents for the weekend, where he discovers a sinister truth about their family.",
+      "movie_pic": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_.jpg"
+    },
+    {
+      "movie_name": "[REC]",
+      "movie_description": "A television crew follows firefighters into a quarantined apartment building and witnesses something horrifying.",
+      "movie_category": "Horror",
+      "movie_pic": "https://i.ytimg.com/vi/Orm3eDqK-GQ/maxresdefault.jpg"
+    },
+    {
+      "movie_name": "Avengers: Endgame",
+      "movie_category": "Marvel",
+      "movie_description": "After Thanos decimates half of all life in the universe, the Avengers must assemble once more to undo the damage and confront the Mad Titan.",
+      "movie_pic": "https://ntvb.tmsimg.com/assets/p15366809_v_h10_aw.jpg?w=960&h=540"
+    },
+    {
+      "movie_name": "Spider-Man: No Way Home",
+      "movie_category": "Marvel",
+      "movie_description": "With Spider-Man's secret identity revealed, Peter Parker asks Doctor Strange for help. The spell tears a hole in the multiverse, unleashing dangerous foes from alternate realities.",
+      "movie_pic": "https://images.thedirect.com/media/article_full/spider-man-no-way-home-art-collection.jpg"
+    },
+    {
+      "movie_name": "Black Panther",
+      "movie_category": "Marvel",
+      "movie_description": "T'Challa, heir to the hidden Wakandan kingdom, must confront a challenger from his country's past when he is sworn in as king.",
+      "movie_pic": "https://cdn.kobo.com/book-images/7e060fa5-3a91-4ed1-94a3-57274b53e233/1200/1200/False/marvel-s-black-panther-4.jpg"
+    },
+    {
+      "movie_name": "Schindler's List",
+      "movie_category": "Emotional",
+      "movie_description": "The true story of Oskar Schindler, a German businessman who saved the lives of over a thousand Jews during the Holocaust.",
+      "movie_pic": "https://i.ytimg.com/vi/mxphAlJID9U/maxresdefault.jpg"
+    },
+    {
+      "movie_name": "The Shawshank Redemption",
+      "movie_category": "Emotional",
+      "movie_description": "Andy Dufresne, a seemingly ordinary man convicted of murder, is sent to Shawshank prison. Over the course of two decades, he befriends a fellow inmate and devises a plan for escape.",
+      "movie_pic": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+    },
+    {
+      "movie_name": "Hachi: A Dog's Tale",
+      "movie_category": "Emotional",
+      "movie_description": "The story of a loyal Akita dog who waits for his owner to return from work at a train station every day, even after his owner dies.",
+      "movie_pic": "https://m.media-amazon.com/images/M/MV5BMTAxMDA2MjM4NDReQTJeQWpwZ15BbWU3MDE0NTgxMTM@._V1_.jpg"
+    }
+  ]
+  
