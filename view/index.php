@@ -16,15 +16,15 @@
         <div class="head_02">
             <div class="head_nav">
 
-                <a class="nav" href="#">Home</a>
-                <a class="nav" href="#">Movie</a>
+                <a class="nav" href="./index.php">Home</a>
+                <a class="nav" href="./movie_page.php">Movie</a>
                 <a class="nav" href="#">Contact</a>
 
             </div>
             <div class="head_search">
                 <input type="search" name="movie_search" id="movie_search">
                 <button class="btn_src">Search</button>
-                <button class="btn_src">Log In</button>
+                <button onclick="register_login()" class="btn_src">Log In</button>
             </div>
         </div>
     </header>
@@ -232,7 +232,7 @@
         <p>&copy; 2023-2024 </p>
         <p>www.movie.com</p>
         </div>
-   
+   <script src="../controller/JS/work_btn.js"></script>
 </body>
 
 </html>
