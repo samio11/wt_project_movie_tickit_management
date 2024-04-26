@@ -24,6 +24,7 @@
             <div class="head_search">
                 <input type="search" name="movie_search" id="movie_search">
                 <button class="btn_src">Search</button>
+                <button class="btn_src">Log In</button>
             </div>
         </div>
     </header>
