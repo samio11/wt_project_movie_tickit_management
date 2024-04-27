@@ -55,7 +55,7 @@ if(isset($_REQUEST['submit'])){
     }
     else{
         $mydb = new model();
-        $conobj= $mydb->OpenConn();
+        $conobj= $mydb->OpenConn();  //connection string
        $result = $mydb->add_customer($conobj,"customer",$_REQUEST['name'],$_REQUEST['email'],$user_type,$_REQUEST['phone'],$_REQUEST['address'],$_REQUEST['password']);
        if($result){
            echo "successfully inserted";
