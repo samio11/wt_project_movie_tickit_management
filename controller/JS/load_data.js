@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to fetch JSON data and display movie cards using innerHTML
+   
     function fetchAndDisplayMovies() {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', 'http://localhost/aiub/movie_management_system/controller/home_category_movie.json', true);
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       xhr.send();
     }
   
-    // Function to construct HTML for movie cards and insert into container using innerHTML
+
     function displayMovieCards(moviesData) {
       var movieContainer = document.getElementById('movieContainer');
       var html = '';

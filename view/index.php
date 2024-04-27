@@ -19,12 +19,14 @@
 
                 <a class="nav" href="./index.php">Home</a>
                 <a class="nav" href="./movie_page.php">Movie</a>
-                <a class="nav" href="#">Contact</a>
+                <a class="nav" href="#">Our Food Stall</a>
 
             </div>
             <div class="head_search">
-                <input type="search" name="movie_search" id="movie_search">
-                <button class="btn_src">Search</button>
+               <a href="./admin_login.php" class="btn_src btn_src1">Admin</a>
+               <a href="./manager_login.php" class="btn_src btn_src1">Manager</a>
+               <a href="./employee_login.php" class="btn_src btn_src1">Employee</a>
+               <a href="./food_manager_login.php" class="btn_src btn_src1">Food  Stall</a>
                 <button onclick="register_login()" class="btn_src">Log In</button>
             </div>
         </div>

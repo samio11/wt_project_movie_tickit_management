@@ -49,11 +49,13 @@ header{
    padding-left: 10px;
 }
 .btn_src{
-    height: 30px;
+    height: 37px;
     width: 100px;
     border: none;
     border-radius: 10px;
     background-color: rebeccapurple;
+    text-align: center;
+    text-decoration: none;
     color: white;
 }
 
@@ -198,5 +200,11 @@ header{
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  .btn_src1{
+    
+    text-decoration: none;
+
   }
   
