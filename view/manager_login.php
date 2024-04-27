@@ -21,7 +21,7 @@
                         <p>Manager Password</p>
                         <input type="password" name="password" placeholder="please Enter password" id="password1" required> <br>
                         <div class="center">
-                            <input type="submit" class="common_btn" value="submit" name="submit">
+                            <input type="submit" class="common_btn" value="Login" name="submit">
                         </div>
                     </form>
                     <div>
