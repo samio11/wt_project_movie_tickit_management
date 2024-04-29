@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delete Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
   <?php
   include '../connection/connectiondb.php';
@@ -14,11 +12,11 @@
   $connobj = $mydb2->openConn();
   if (isset($_REQUEST['id'])) {
     $id = $_REQUEST['id'];
-    $result = $mydb2->deleteEmployee($connobj, "employee", $id);
+    $result = $mydb2->deleteCustomer($connobj, "customer", $id);
     if ($result) {
       echo "successfully deleted";
 
-      header('location: ../view/manager_dashbord.php');
+      header('location: ../view/employee_dashbord.php');
     } else {
       die(mysqli_error($connobj));
     }
@@ -26,5 +24,4 @@
 
   ?>
 </body>
-
 </html>

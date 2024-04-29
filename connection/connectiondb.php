@@ -40,6 +40,19 @@ class model{
         $result = $conn->query($deleteQuery);
         return $result;
       }
+      function showCustomer($conn,$table)
+      {
+        $showQuery = "SELECT * FROM $table";
+        $result = $conn->query($showQuery);
+        return $result;
+      }
+       
+      function deleteCustomer($conn,$table,$id)
+      {
+        $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+        $result = $conn->query($deleteQuery);
+        return $result;
+      }
 
   
     
