@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./css/login.css">
     <title>Employee</title>
 </head>
+<?php
+include '../controller/employee_login_logic.php';
+?>
 <body>
 <div class="login_full_body">
         <div class="login_small_part">

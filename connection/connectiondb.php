@@ -9,6 +9,12 @@ class model{
         $result = $conn->query($insertSql);
         return $result;
       }
+      function admin_login_process($conn,$table,$email,$password){
+        $showQuery = "SELECT * FROM $table WHERE email = '$email' AND password = '$password";
+        $result = $conn->query($showQuery);
+        return $result; 
+      }
+  
     
 }
 ?>

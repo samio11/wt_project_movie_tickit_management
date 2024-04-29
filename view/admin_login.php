@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./css/login.css">
     <title>Admin</title>
 </head>
-
+<?php
+include '../controller/admin_login_logic.php';
+?>
 <body>
     <div class="login_full_body">
         <div class="login_small_part">
