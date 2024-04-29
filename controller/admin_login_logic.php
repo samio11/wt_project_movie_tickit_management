@@ -12,7 +12,7 @@ if (isset($_REQUEST['submit'])) {
     {
         session_start();
         $_SESSION['email'] = $userEmail;
-        header('location:../view/index.php');
+        header('location:./admin_dashbord.php');
     }
     else{
         echo "No Data Matching";

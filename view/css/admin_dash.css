@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.s1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn{
+    height: 37px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.btn:hover{
+    background-color: rgb(102, 102, 255);
+}
+
+.text_center{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* Styling for edit_btn */
+.edit_btn,
+.delete_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 10px; /* Optional margin between buttons */
+}
+
+/* Styling specific to edit_btn */
+.edit_btn {
+  background-color: #007bff;
+}
+
+/* Styling specific to delete_btn */
+.delete_btn {
+  background-color: #dc3545;
+}
+
+/* Hover effect for edit_btn and delete_btn */
+.edit_btn:hover,
+.delete_btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Active (clicked) effect for edit_btn and delete_btn */
+.edit_btn:active,
+.delete_btn:active {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(1px);
+}

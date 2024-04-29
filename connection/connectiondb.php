@@ -14,6 +14,33 @@ class model{
         $result = $conn->query($showQuery);
         return $result; 
       }
+
+      function showManager($conn,$table)
+      {
+        $showQuery = "SELECT * FROM $table";
+        $result = $conn->query($showQuery);
+        return $result;   
+      }
+      function deleteManager($conn,$table,$id)
+      {
+        $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+        $result = $conn->query($deleteQuery);
+        return $result;
+      }
+      function showEmployee($conn,$table)
+      {
+        $showQuery = "SELECT * FROM $table";
+        $result = $conn->query($showQuery);
+        return $result;
+      }
+       
+      function deleteEmployee($conn,$table,$id)
+      {
+        $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+        $result = $conn->query($deleteQuery);
+        return $result;
+      }
+
   
     
 }
