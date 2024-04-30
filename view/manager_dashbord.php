@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/admin_dash.css">
     <title>Manager</title>
 </head>
+
 <body>
-<h2 class="text_center"> this is Manager dashbord</h2>
+    <h2 class="text_center"> this is Manager dashbord</h2>
     <?php
     session_start();
     if ($_SESSION['email']) {
         echo '<div class="s1">';
         echo '<div>';
-        echo '<p>'.'Welcome(Manager)' . $_SESSION['email'] . '</p>';
+        echo '<p>' . 'Welcome(Manager)' . $_SESSION['email'] . '</p>';
         echo '</div>';
         echo '<div>';
         echo "<a class='btn' href='../controller/logout.php'>Logout</a>";
@@ -41,12 +43,12 @@
 
         <tbody>
             <?php
-                include '../connection/connectiondb.php';
-                $mydb1 = new model();
-                $connobj = $mydb1->openConn();
-                $result = $mydb1->showEmployee($connobj, "employee");
-                if ($result) {
-                  while ($row = mysqli_fetch_assoc($result)) {
+            include '../connection/connectiondb.php';
+            $mydb1 = new model();
+            $connobj = $mydb1->openConn();
+            $result = $mydb1->showEmployee($connobj, "employee");
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
                     $id = $row['id'];
                     $name = $row['name'];
                     $email = $row['email'];
@@ -64,11 +66,78 @@
               <td><a class= "edit_btn" href="edit_user.php?id=' . $id . '">Edit</a></td>
               <td><a class = "delete_btn" href="../controller/delete_employee.php?id=' . $id . '">Delete</a></td>
             </tr>';
-                  }
                 }
-            
+            }
+
             ?>
         </tbody>
     </table>
+
+    <!-- search employee -->
+    <div class="s1">
+        <div>
+            <h2>Search Employee</h2>
+        </div>
+        <div>
+            <form action="">
+                <input type="text" class="input_field" name="input_field" placeholder="Please Enter Name of employee" id="">
+                <input class="btn" type="submit" name="search_btn" value="Search">
+            </form>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>User Type</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $mydb = new model();
+            $conobj = $mydb->OpenConn();
+            if (isset($_REQUEST['search_btn'])) {
+                $search = $_REQUEST['input_field'];
+                $sql = "SELECT * FROM employee WHERE id = '$search' or name = '$search' or email = '$search'";
+                $result = mysqli_query($conobj, $sql);
+                if (mysqli_num_rows($result) > 0) {
+                    $row = mysqli_fetch_assoc($result);
+                    echo '<tbody>
+                    <tr>
+                    <td>' . $row['id'] . '</td>
+                    <td>' . $row['name'] . '</td>
+                    <td>' . $row['email'] . '</td>
+                    <td>' . $row['password'] . '</td>
+                    <td>' . $row['user_type'] . '</td>
+                    <td>' . $row['phone'] . '</td>
+                    </tr>
+                    </tbody>
+                    ';
+                } else {
+                    echo '<tr>
+                        <td>No Data Found</td>
+                        </tr>';
+                }
+            }
+            ?>
+
+        </tbody>
+    </table>
+
+    <div class="s1">
+        <div>
+            <h2>Add New Employee</h2>
+        </div>
+        <div>
+            <a class="btn" href="add_new_employee.php">Add Customer</a>
+        </div>
+    </div>
+
 </body>
+
 </html>

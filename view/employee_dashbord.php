@@ -83,13 +83,13 @@
     </div>
     <div class="s1">
         <div>
-            <h2>Search Employee</h2>
+            <h2>Search Customer</h2>
         </div>
         <div>
             <!-- <a class="edit_btn" href="add_new_employee.php">Add Employee</a> -->
             <form action="">
                 <input type="text" name="input_field" placeholder="Please Enter Name of User" id="">
-                <input type="submit" name="search_btn" value="Search">
+                <input type="submit" class="btn" name="search_btn" value="Search">
             </form>
         </div>
     </div>

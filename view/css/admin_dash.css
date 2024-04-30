@@ -6,7 +6,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .btn{
@@ -83,4 +84,22 @@ th {
   background-color: #0056b3;
   border-color: #0056b3;
   transform: translateY(1px);
+}
+
+.input_field {
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input_field::placeholder {
+  color: #999;
+}
+
+.input_field:focus {
+  border-color: #007bff; /* Change border color on focus */
 }
