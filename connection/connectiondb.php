@@ -80,6 +80,18 @@ class model{
         $result = $conn->query($updateSql);
         return $result;
       }
+
+      function admin_employee_show($conn,$table)
+    {
+        $sql = "SELECT * from $table";
+        return $conn->query($sql);
+    }
+
+    function admin_customer_show($conn,$table)
+    {
+      $sql = "SELECT * from $table";
+      return $conn->query($sql);
+    }
   
   
     

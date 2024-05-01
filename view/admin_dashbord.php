@@ -80,7 +80,59 @@
             <a class="btn" href="./add_new_manager.php">Add Manager</a>
         </div>
     </div>
+    <div class="s1">
+        <div>
+            <h2>SEE Employee</h2>
+        </div>
+        <div>
+            <button class="btn" onclick="loadUser()">See All</button>
+        </div>
+    </div>
 
+
+
+    <table>
+    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>User Type</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="txt">
+
+        </tbody>
+    </table>
+
+    <div class="s1">
+        <div>
+            <h2>SEE Customer</h2>
+        </div>
+        <div>
+            <button class="btn" onclick="loadCustomer()">See All</button>
+        </div>
+    </div>
+    <table>
+    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>User Type</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="txt1">
+
+        </tbody>
+    </table>
+    
+<script src="../controller/JS/load_admin_data.js"></script>
+<script src="../controller/JS/load_admin_customer_data.js"></script>
 </body>
 
 </html>
