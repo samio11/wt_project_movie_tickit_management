@@ -17,6 +17,14 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            
+        $("#show_movie").click(function() {
+            $("#show2").fadeToggle(3000);
+        });
+        });
+    </script>
 </head>
 
 <body>
@@ -97,7 +105,7 @@
         </div>
     </div>
     <div class="s1">
-    <button id="hide_btn" class="btn">Hide Field</button>
+        <button id="hide_btn" class="btn">Hide Field</button>
     </div>
     <table class="hide_container">
         <thead>
@@ -150,6 +158,63 @@
             <a class="btn" href="./add_new_employee.php">Add Employee</a>
         </div>
     </div>
+
+    <div class="s1">
+        <div>
+            <h2>Add New Movie</h2>
+        </div>
+        <div>
+            <a class="btn" href="./add_new_movie.php">Add Movie</a>
+        </div>
+    </div>
+    <div class="s1">
+        <button class="big_btn" id="show_movie">Show All Movie Info</button>
+    </div>
+    <table id="show2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie Name</th>
+                <th>Movie Rating</th>
+                <th>Avilable Ticket</th>
+                <th>Ticket Price</th>
+                <th>Ticket Sells</th>
+                <th>Movie Picture</th>
+                <th>Movie Duration</th>
+                <th>Movie Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // include '../connection/connectiondb.php';
+            $mydb = new model();
+            $conObj = $mydb->OpenConn();
+            $result = $mydb->show_movie_data($conObj, "movie");
+
+
+
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["id"] . "</td>";
+                    echo "<td>" . $row["movie_name"] . "</td>";
+                    echo "<td>" . $row["movie_rating"] . "</td>";
+                    echo "<td>" . $row["movie_ticket_avilable"] . "</td>";
+                    echo "<td>" . $row["ticket_price"] . "</td>";
+                    echo "<td>" . $row["ticket_sells"] . "</td>";
+                    echo '<td><img src="picture/' . $row['movie_poster'] . '" width="150" height="150" alt="image"></td>';
+                    echo "<td>" . $row["movie_duration"] . "</td>";
+                    echo "<td>" . $row["movie_category"] . "</td>";
+                    echo "</tr>";
+                }
+            }
+            ?>
+        </tbody>
+
+    </table>
+
+
 
 </body>
 

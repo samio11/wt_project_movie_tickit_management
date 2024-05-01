@@ -92,7 +92,15 @@ class model{
       $sql = "SELECT * from $table";
       return $conn->query($sql);
     }
-  
+   function add_movie($conn,$table,$movie_name,$movie_rating,$movie_ticket_avilable,$ticket_price,$ticket_sells,$movie_poster,$movie_duration,$movie_category){
+      $insertSql = "INSERT INTO $table(movie_name,movie_rating,movie_ticket_avilable,ticket_price,ticket_sells,movie_poster,movie_duration,movie_category) VALUES ('$movie_name','$movie_rating','$movie_ticket_avilable','$ticket_price','$ticket_sells','$movie_poster','$movie_duration','$movie_category')";
+      $result = $conn->query($insertSql);
+      return $result;
+   }
+   function show_movie_data($conn,$table){
+    $sql = "SELECT * from $table";
+    return $conn->query($sql);
+   }
   
     
 }
