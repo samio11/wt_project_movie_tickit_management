@@ -36,6 +36,7 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>User Type</th>
+                <th>Address</th>
                 <th>Phone</th>
                 <th>Edit</th>
                 <th>Delete</th>
@@ -55,6 +56,7 @@
                     $email = $row['email'];
                     $password = $row['password'];
                     $role = $row['user_type'];
+                    $address = $row['address'];
                     $phone = $row['phone'];
                     echo
                     '<tr>
@@ -63,8 +65,9 @@
               <td>' . $email . '</td>
               <td>' . $password . '</td>
               <td>' . $role . '</td>
+              <td>' . $address . '</td>
               <td>' . $phone . '</td>
-              <td><a class= "edit_btn" href="edit_user.php?id=' . $id . '">Edit</a></td>
+              <td><a class= "edit_btn" href="../controller/edit_customer_info.php?id=' . $id . '">Edit</a></td>
               <td><a class = "delete_btn" href="../controller/delete_customer.php?id=' . $id . '">Delete</a></td>
             </tr>';
                 }

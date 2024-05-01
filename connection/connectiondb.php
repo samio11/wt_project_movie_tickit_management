@@ -58,6 +58,18 @@ class model{
         $result = $conn->query($deleteQuery);
         return $result;
       }
+
+      function updateCustomer($conn,$table,$id,$name,$email,$password,$user_type,$address,$phone){
+        $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',address='$address',phone='$phone' WHERE id=$id";
+        $result = $conn->query($updateSql);
+        return $result;
+      }
+      function updateEmployee($conn,$table,$id,$name,$email,$password,$user_type,$phone){
+        $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',phone='$phone' WHERE id=$id";
+        $result = $conn->query($updateSql);
+        return $result;
+      }
+  
   
     
 }

@@ -63,7 +63,7 @@
               <td>' . $password . '</td>
               <td>' . $role . '</td>
               <td>' . $phone . '</td>
-              <td><a class= "edit_btn" href="edit_user.php?id=' . $id . '">Edit</a></td>
+              <td><a class= "edit_btn" href="../controller/edit_employee_info.php?id=' . $id . '">Edit</a></td>
               <td><a class = "delete_btn" href="../controller/delete_employee.php?id=' . $id . '">Delete</a></td>
             </tr>';
                 }
