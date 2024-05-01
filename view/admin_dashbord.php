@@ -63,7 +63,7 @@
               <td>' . $password . '</td>
               <td>' . $role . '</td>
               <td>' . $phone . '</td>
-              <td><a class= "edit_btn" href="edit_user.php?id=' . $id . '">Edit</a></td>
+              <td><a class= "edit_btn" href="../controller/edit_manager_info.php?id=' . $id . '">Edit</a></td>
               <td><a class = "delete_btn" href="../controller/delete_manager.php?id=' . $id . '">Delete</a></td>
             </tr>';
                   }
@@ -72,6 +72,14 @@
             ?>
         </tbody>
     </table>
+    <div class="s1">
+        <div>
+            <h2>Add New Manager</h2>
+        </div>
+        <div>
+            <a class="btn" href="./add_new_manager.php">Add Manager</a>
+        </div>
+    </div>
 
 </body>
 

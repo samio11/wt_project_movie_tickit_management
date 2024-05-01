@@ -8,7 +8,7 @@
     <title>Add Customer</title>
 </head>
 <?php
-include '../controller/add_new_employee_logic.php';
+include '../controller/add_new_manager_logic.php';
 ?>
 
 <body>
@@ -28,27 +28,26 @@ include '../controller/add_new_employee_logic.php';
             <?php
             echo $emailErr;
             ?>
-            <p>Password</p>
-            <input type="password" name="password" id="password1"> <br>
-            <?php
-            echo $passwordErr;
-            ?>
             <p>user type</p>
-            <input type="text" name="user_type" id="user_type1" disabled>
+            <input type="email" name="user_type" id="user_type1" disabled>
             <p>Phone Number</p>
             <input type="text" name="phone" id="phone1">
             <br>
             <?php
             echo $phoneErr;
             ?>
-            
+            <p>Password</p>
+            <input type="password" name="password" id="password1"> <br>
+            <?php
+            echo $passwordErr;
+            ?>
             <div class="center">
                 <input type="submit" class="common_btn" value="Register" name="submit">
             </div>
         </form>
 
         <div class="center">
-            <a class="common_btn" href="./manager_dashbord.php">Back LogIn</a>
+            <a class="common_btn" href="./admin_dashbord.php">Back LogIn</a>
         </div>
 
     </div>

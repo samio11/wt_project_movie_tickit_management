@@ -1,6 +1,6 @@
 <?php
 include '../connection/connectiondb.php';
-$user_type = "employee";
+$user_type = "manager";
 $name = $email = $password = $phone = $hasErr ="";
 $nameErr = $emailErr = $passwordErr = $phoneErr = "";
 if(isset($_REQUEST['submit'])){
@@ -48,10 +48,10 @@ if(isset($_REQUEST['submit'])){
     else{
         $mydb = new model();
         $conobj= $mydb->OpenConn();  //connection string
-       $result = $mydb->add_employee($conobj,"employee",$name,$email,$password,$user_type,$phone);
+       $result = $mydb->add_manager($conobj,"manager",$name,$email,$password,$user_type,$phone);
        if($result){
            echo "successfully inserted";
-           header('location: ../view/manager_dashbord.php');
+           header('location: ../view/admin_dashbord.php');
        }
        else{
            echo "failed to insert";

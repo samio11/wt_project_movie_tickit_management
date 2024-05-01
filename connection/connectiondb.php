@@ -9,11 +9,17 @@ class model{
         $result = $conn->query($insertSql);
         return $result;
       }
-    function add_employee($conn,$table,$name,$email,$user_type,$phone,$password){
+    function add_employee($conn,$table,$name,$email,$password,$user_type,$phone){
         $insertSql = "INSERT INTO $table(name,email,password,user_type,phone) VALUES ('$name','$email','$password','$user_type','$phone')";
         $result = $conn->query($insertSql);
         return $result;
       }
+    function add_manager($conn,$table,$name,$email,$password,$user_type,$phone){
+        $insertSql = "INSERT INTO $table(name,email,password,user_type,phone) VALUES ('$name','$email','$password','$user_type','$phone')";
+        $result = $conn->query($insertSql);
+        return $result;
+      }
+  
       function admin_login_process($conn,$table,$email,$password){
         $showQuery = "SELECT * FROM $table WHERE email = '$email' AND password = '$password";
         $result = $conn->query($showQuery);
@@ -65,6 +71,11 @@ class model{
         return $result;
       }
       function updateEmployee($conn,$table,$id,$name,$email,$password,$user_type,$phone){
+        $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',phone='$phone' WHERE id=$id";
+        $result = $conn->query($updateSql);
+        return $result;
+      }
+      function updateManager($conn,$table,$id,$name,$email,$password,$user_type,$phone){
         $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',phone='$phone' WHERE id=$id";
         $result = $conn->query($updateSql);
         return $result;

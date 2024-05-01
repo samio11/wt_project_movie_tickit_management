@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/admin_dash.css">
-    <title>Document</title>
+    <title>Employee Dashbord</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#hide_btn").click(function() {
+                // $("#div1").fadeToggle();
+                document.getElementById("hide_btn").innerText = "show";
+                $(".hide_container").slideToggle("slow");
+                //  $("#div3").fadeToggle(3000);
+            });
+        });
+    </script>
 </head>
 
 
@@ -96,7 +107,10 @@
             </form>
         </div>
     </div>
-    <table>
+    <div class="s1">
+    <button id="hide_btn" class="btn">Hide Field</button>
+    </div>
+    <table class="hide_container">
         <thead>
             <tr>
                 <th>ID</th>
