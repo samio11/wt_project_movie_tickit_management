@@ -19,7 +19,7 @@
 
                 <a class="nav" href="./index.php">Home</a>
                 <a class="nav" href="./movie_page.php">Movie</a>
-                <a class="nav" href="#">Our Food Stall</a>
+                <a class="nav" href="./food_page.php">Our Food Stall</a>
 
             </div>
             <div class="head_search">
@@ -39,7 +39,7 @@
                     <h2 class="large_txt">"Lights, camera, action! Secure your seat to cinematic magic! 🎬</h2>
                     <p class="small_txt">Book your movie tickets online now and dive into a world of unforgettable stories.</p>
                     <div class="s1">
-                        <button class="common_btn">Book Ticket</button>
+                        <button onclick="register_login()" class="common_btn">Book Ticket</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <h2 class="movie_name">Deadpool</h2>
                     <p class="common_for_txt">Wade Wilson, a former Special Forces operative turned mercenary, undergoes an experimental procedure <br> to cure his cancer but ends up acquiring accelerated healing powers and adopting the alter ego Deadpool. <br> With his dark humor and penchant for breaking the fourth wall, Deadpool hunts <br> down the man who nearly destroyed his life. This irreverent and action-packed superhero film subverts <br> the genre's conventions, delivering a hilarious and adrenaline-fueled ride that <br> delights audiences with its wit and irreverence. <br></p>
                     <div class="ff_1">
-                        <button class="common_btn">Book Ticket</button>
+                        <!-- <button class="common_btn">Book Ticket</button> -->
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <h2 class="movie_name">Spider-Man: No Way Home (2021)</h2>
                 <p class="common_for_txt">n this thrilling installment of the Spider-Man franchise, Peter Parker's life is upended <br> when his identity as Spider-Man is revealed to the world, bringing chaos and danger to his doorstep. <br>br Seeking help from Doctor Strange, Peter attempts to undo the spell but inadvertently unleashes villains <br> from alternate universes. Now, facing formidable foes from his past, Peter must confront his greatest <br> challenge yet and protect both his loved ones and the multiverse itself. <br> "Spider-Man: No Way Home" is a spectacular blend of action, emotion, and nostalgia <br> that leaves audiences on the edge of their seats.</p>
                 <div class="ff_1">
-                    <button class="common_btn">Book Ticket</button>
+                    <!-- <button class="common_btn">Book Ticket</button> -->
                 </div>
             </div>
             <div class="ff_1">

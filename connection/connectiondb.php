@@ -165,6 +165,12 @@ class model{
      $result = $conn->query($insertSql);
      return $result;
    }
+   function customer_insert_to_buy_food($conn,$table,$customer_name,$food_name,$quantity,$total_price,$per_food_price)
+   {
+     $insertSql = "INSERT INTO $table(customer_name,food_name,quantity,total_price_discount,per_food_price) VALUES ('$customer_name','$food_name','$quantity','$total_price','$per_food_price')";
+     $result = $conn->query($insertSql);
+     return $result;
+   }
 
    function showFoodController($conn,$table)
    {
