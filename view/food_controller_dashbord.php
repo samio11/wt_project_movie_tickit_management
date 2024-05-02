@@ -78,6 +78,32 @@
         </tbody>
 
     </table>
+
+    <!-- ajax work -->
+    <div class="s1">
+        <div>
+            <h2>SEE Movie</h2>
+        </div>
+        <div>
+            <button class="btn" onclick="loadFoodOrder()">See All</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Food Name</th>
+                <th>Quantity of Food</th>
+                <th>Per Food Discount Rate</th>
+                <th>Net Price of Food</th>
+            </tr>
+        </thead>
+        <tbody id="txt6">
+
+        </tbody>
+    </table>
+    <script src="../controller/JS/load_food_order.js"></script>
 </body>
 
 </html>

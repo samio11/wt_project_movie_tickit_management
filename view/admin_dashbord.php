@@ -157,6 +157,46 @@
         </tbody>
     </table>
 
+
+    <h3 class="text_center">Customer (Movie) Order</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Movie Name</th>
+                <th>Movie He Buyed</th>
+                <th>Per Ticket Discount Rate</th>
+                <th>Per Ticket Actual Rate</th>
+              
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php
+            // include '../connection/connectiondb.php';
+            $mydb1 = new model();
+            $connobj = $mydb1->openConn();
+            $result = $mydb1->showBuyedMovieInfo($connobj, "customer_buyed_movie");
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo
+                    '<tr>
+                    <td>' . $row['id'] . '</td>
+              <td>' . $row['customer_name'] . '</td>
+              <td>' . $row['movie_name'] . '</td>
+              <td>' . $row['quantity'] . '</td>
+              <td>' . $row['total_price_discount'] . '</td>
+              <td>' . $row['per_ticket_price'] . '</td>
+             
+            </tr>';
+                }
+            }
+
+            ?>
+        </tbody>
+    </table>
+
     <script src="../controller/JS/load_admin_data.js"></script>
     <script src="../controller/JS/load_admin_customer_data.js"></script>
     <script src="../controller//JS/load_admin_movie_data.js"></script>

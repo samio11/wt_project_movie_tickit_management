@@ -178,6 +178,21 @@ class model{
      $result = $conn->query($showQuery);
      return $result;
    }
+
+   function showBuyedMovieInfo($conn,$table)
+   {
+    $showQuery = "SELECT * FROM $table";
+    $result = $conn->query($showQuery);
+    return $result;
+   }
+   function showOrderFoods($conn,$table)
+   {
+    $showQuery = "SELECT * FROM $table";
+    $result = $conn->query($showQuery);
+    return $result;
+   }
+    
+
   
     
 }
