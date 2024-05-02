@@ -151,8 +151,60 @@
             ?>
 
         </tbody>
+
+
     </table>
 
+    <div class="s1">
+        <h2>Edit And Delete Movie</h2>
+    </div>
+    <table id="show3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie Name</th>
+                <th>Movie Rating</th>
+                <th>Avilable Ticket</th>
+                <th>Ticket Price</th>
+                <th>Ticket Sells</th>
+                <th>Movie Picture</th>
+                <th>Movie Duration</th>
+                <th>Movie Category</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // include '../connection/connectiondb.php';
+            $mydb = new model();
+            $conObj = $mydb->OpenConn();
+            $result = $mydb->show_movie_data($conObj, "movie");
+
+
+
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["id"] . "</td>";
+                    echo "<td>" . $row["movie_name"] . "</td>";
+                    echo "<td>" . $row["movie_rating"] . "</td>";
+                    echo "<td>" . $row["movie_ticket_avilable"] . "</td>";
+                    echo "<td>" . $row["ticket_price"] . "</td>";
+                    echo "<td>" . $row["ticket_sells"] . "</td>";
+                    echo '<td><img src="picture/' . $row['movie_poster'] . '" width="150" height="150" alt="image"></td>';
+                    echo "<td>" . $row["movie_duration"] . "</td>";
+                    echo "<td>" . $row["movie_category"] . "</td>";
+                    echo "<td><a class= 'edit_btn' href='../controller/edit_movie_info.php?id=". $row['id']. "'>Edit</a></td>";
+                    echo "<td><a class= 'delete_btn' href='../controller/delete_movie.php?id=". $row['id']. "'>Delete</a></td>";
+                    echo "</tr>";
+                }
+            }
+            ?>
+        </tbody>
+
+    </table>
 
 
 </body>

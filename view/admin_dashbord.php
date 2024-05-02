@@ -15,7 +15,7 @@
     if ($_SESSION['email']) {
         echo '<div class="s1">';
         echo '<div>';
-        echo '<p>'.'Welcome(admin)' . $_SESSION['email'] . '</p>';
+        echo '<p>' . 'Welcome(admin)' . $_SESSION['email'] . '</p>';
         echo '</div>';
         echo '<div>';
         echo "<a class='btn' href='../controller/logout.php'>Logout</a>";
@@ -43,12 +43,12 @@
 
         <tbody>
             <?php
-                include '../connection/connectiondb.php';
-                $mydb1 = new model();
-                $connobj = $mydb1->openConn();
-                $result = $mydb1->showManager($connobj, "manager");
-                if ($result) {
-                  while ($row = mysqli_fetch_assoc($result)) {
+            include '../connection/connectiondb.php';
+            $mydb1 = new model();
+            $connobj = $mydb1->openConn();
+            $result = $mydb1->showManager($connobj, "manager");
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
                     $id = $row['id'];
                     $name = $row['name'];
                     $email = $row['email'];
@@ -66,9 +66,9 @@
               <td><a class= "edit_btn" href="../controller/edit_manager_info.php?id=' . $id . '">Edit</a></td>
               <td><a class = "delete_btn" href="../controller/delete_manager.php?id=' . $id . '">Delete</a></td>
             </tr>';
-                  }
                 }
-            
+            }
+
             ?>
         </tbody>
     </table>
@@ -92,7 +92,7 @@
 
 
     <table>
-    <thead>
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -116,7 +116,7 @@
         </div>
     </div>
     <table>
-    <thead>
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -130,9 +130,36 @@
 
         </tbody>
     </table>
-    
-<script src="../controller/JS/load_admin_data.js"></script>
-<script src="../controller/JS/load_admin_customer_data.js"></script>
+    <div class="s1">
+        <div>
+            <h2>SEE Movie</h2>
+        </div>
+        <div>
+            <button class="btn" onclick="loadMovie()">See All</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+                <th>ID</th>
+                <th>Movie Name</th>
+                <th>Movie Rating</th>
+                <th>Avilable Ticket</th>
+                <th>Ticket Price</th>
+                <th>Ticket Sells</th>
+                <th>Movie Picture</th>
+                <th>Movie Duration</th>
+                <th>Movie Category</th>
+            </tr>
+        </thead>
+        <tbody id="txt5">
+
+        </tbody>
+    </table>
+
+    <script src="../controller/JS/load_admin_data.js"></script>
+    <script src="../controller/JS/load_admin_customer_data.js"></script>
+    <script src="../controller//JS/load_admin_movie_data.js"></script>
 </body>
 
 </html>

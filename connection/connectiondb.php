@@ -101,6 +101,17 @@ class model{
     $sql = "SELECT * from $table";
     return $conn->query($sql);
    }
+   function delete_movie($conn,$table,$id)
+   {
+     $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+     $result = $conn->query($deleteQuery);
+     return $result;
+   }
+   function updateMovie($conn,$table,$id,$movie_name,$movie_rating,$movie_ticket_avilable,$ticket_price,$ticket_sells,$movie_poster,$movie_duration,$movie_category){
+    $updateSql = "UPDATE $table SET movie_name='$movie_name',movie_rating='$movie_rating',movie_ticket_avilable='$movie_ticket_avilable',ticket_price='$ticket_price',ticket_sells='$ticket_sells',movie_poster='$movie_poster',movie_duration='$movie_duration',movie_category='$movie_category' WHERE id=$id";
+    $result = $conn->query($updateSql);
+    return $result;
+   }
   
     
 }
