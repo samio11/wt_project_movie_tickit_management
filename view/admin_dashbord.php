@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2 class="text_center"> this is admin dashbord</h2>
+    <h2 class="text_center">Admin dashbord</h2>
     <?php
     session_start();
     if ($_SESSION['email']) {

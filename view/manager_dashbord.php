@@ -19,16 +19,16 @@
     </script>
     <script>
         $(document).ready(function() {
-            
-        $("#show_movie").click(function() {
-            $("#show2").fadeToggle(3000);
-        });
+
+            $("#show_movie").click(function() {
+                $("#show2").fadeToggle(3000);
+            });
         });
     </script>
 </head>
 
 <body>
-    <h2 class="text_center"> this is Manager dashbord</h2>
+    <h2 class="text_center"> Manager dashbord</h2>
     <?php
     session_start();
     if ($_SESSION['email']) {
@@ -212,6 +212,53 @@
             ?>
         </tbody>
 
+    </table>
+
+    <h3 class="text_center">Food Controller Management</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>User Type</th>
+                <th>Phone</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php
+            // include '../connection/connectiondb.php';
+            $mydb1 = new model();
+            $connobj = $mydb1->openConn();
+            $result = $mydb1->showFoodController($connobj, "food_controller");
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $id = $row['id'];
+                    $name = $row['name'];
+                    $email = $row['email'];
+                    $password = $row['password'];
+                    $role = $row['user_type'];
+                    $phone = $row['phone'];
+                    echo
+                    '<tr>
+                    <td>' . $id . '</td>
+              <td>' . $name . '</td>
+              <td>' . $email . '</td>
+              <td>' . $password . '</td>
+              <td>' . $role . '</td>
+              <td>' . $phone . '</td>
+              <td><a class= "edit_btn" href="../controller/edit_food_controller_info.php?id=' . $id . '">Edit</a></td>
+              <td><a class = "delete_btn" href="../controller/delete_food_controller.php?id=' . $id . '">Delete</a></td>
+            </tr>';
+                }
+            }
+
+            ?>
+        </tbody>
     </table>
 
 

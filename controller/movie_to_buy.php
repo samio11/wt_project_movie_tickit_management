@@ -20,9 +20,6 @@ else{
 ?>
 
 
-
-
-
 <body>
 <?php
 include "../connection/connectiondb.php";
@@ -35,7 +32,7 @@ include "../connection/connectiondb.php";
 
 <?php
 // Default values
-$ticket_price = $rows['ticket_price']; 
+$ticket_price = intval($rows['ticket_price']); 
 $discounted_price = $ticket_price; 
 
 // Check if the form is submitted

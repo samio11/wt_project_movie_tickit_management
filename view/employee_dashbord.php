@@ -21,7 +21,7 @@
 
 
 <body>
-    <h2 class="text_center"> this is Employee dashbord</h2>
+    <h2 class="text_center">Employee dashbord</h2>
     <?php
     session_start();
     if ($_SESSION['email']) {
@@ -93,6 +93,14 @@
         </div>
         <div>
             <a class="edit_btn" href="add_new_customer.php">Add Customer</a>
+        </div>
+    </div>
+    <div class="s1">
+        <div>
+            <h2>Add New Food Controller</h2>
+        </div>
+        <div>
+            <a class="edit_btn" href="add_new_food_controller.php">Add Customer</a>
         </div>
     </div>
     <div class="s1">

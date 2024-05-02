@@ -14,6 +14,11 @@ class model{
         $result = $conn->query($insertSql);
         return $result;
       }
+    function add_food_controller($conn,$table,$name,$email,$password,$user_type,$phone){
+        $insertSql = "INSERT INTO $table(name,email,password,user_type,phone) VALUES ('$name','$email','$password','$user_type','$phone')";
+        $result = $conn->query($insertSql);
+        return $result;
+      }
     function add_manager($conn,$table,$name,$email,$password,$user_type,$phone){
         $insertSql = "INSERT INTO $table(name,email,password,user_type,phone) VALUES ('$name','$email','$password','$user_type','$phone')";
         $result = $conn->query($insertSql);
@@ -64,6 +69,12 @@ class model{
         $result = $conn->query($deleteQuery);
         return $result;
       }
+      function deleteFoodController($conn,$table,$id)
+      {
+        $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+        $result = $conn->query($deleteQuery);
+        return $result;
+      }
 
       function updateCustomer($conn,$table,$id,$name,$email,$password,$user_type,$address,$phone){
         $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',address='$address',phone='$phone' WHERE id=$id";
@@ -71,6 +82,11 @@ class model{
         return $result;
       }
       function updateEmployee($conn,$table,$id,$name,$email,$password,$user_type,$phone){
+        $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',phone='$phone' WHERE id=$id";
+        $result = $conn->query($updateSql);
+        return $result;
+      }
+      function updateFoodController($conn,$table,$id,$name,$email,$password,$user_type,$phone){
         $updateSql = "UPDATE $table SET name='$name',email='$email',password='$password',user_type='$user_type',phone='$phone' WHERE id=$id";
         $result = $conn->query($updateSql);
         return $result;
@@ -124,6 +140,13 @@ class model{
    {
      $insertSql = "INSERT INTO $table(customer_name,movie_name,quantity,total_price_discount,per_ticket_price) VALUES ('$customer_name','$movie_name','$quantity','$total_price','$per_ticket_price')";
      $result = $conn->query($insertSql);
+     return $result;
+   }
+
+   function showFoodController($conn,$table)
+   {
+     $showQuery = "SELECT * FROM $table";
+     $result = $conn->query($showQuery);
      return $result;
    }
   
