@@ -112,6 +112,20 @@ class model{
     $result = $conn->query($updateSql);
     return $result;
    }
+
+   function customer_add_movie_for_buy($conn,$table,$movie_name)
+   {
+      $show = "SELECT * FROM $table WHERE movie_name=$movie_name";
+      $result = $conn->query($show);
+      return $result;
+   }
+
+   function customer_insert_to_buy($conn,$table,$customer_name,$movie_name,$quantity,$total_price,$per_ticket_price)
+   {
+     $insertSql = "INSERT INTO $table(customer_name,movie_name,quantity,total_price_discount,per_ticket_price) VALUES ('$customer_name','$movie_name','$quantity','$total_price','$per_ticket_price')";
+     $result = $conn->query($insertSql);
+     return $result;
+   }
   
     
 }
