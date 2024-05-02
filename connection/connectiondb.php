@@ -113,7 +113,18 @@ class model{
       $result = $conn->query($insertSql);
       return $result;
    }
+   function add_food($conn,$table,$food_name,$food_rating,$food_price,$food_desc,$food_image)
+   {
+    $insertSql = "INSERT INTO $table(food_name,food_rating,food_price,food_desc,food_image) VALUES ('$food_name','$food_rating','$food_price','$food_desc','$food_image')";
+    $result = $conn->query($insertSql);
+    return $result;
+   }
+   
    function show_movie_data($conn,$table){
+    $sql = "SELECT * from $table";
+    return $conn->query($sql);
+   }
+   function show_food_data($conn,$table){
     $sql = "SELECT * from $table";
     return $conn->query($sql);
    }
@@ -123,8 +134,20 @@ class model{
      $result = $conn->query($deleteQuery);
      return $result;
    }
+   function delete_food($conn,$table,$id)
+   {
+     $deleteQuery = "DELETE FROM $table WHERE id = '$id'";
+     $result = $conn->query($deleteQuery);
+     return $result;
+   }
    function updateMovie($conn,$table,$id,$movie_name,$movie_rating,$movie_ticket_avilable,$ticket_price,$ticket_sells,$movie_poster,$movie_duration,$movie_category){
     $updateSql = "UPDATE $table SET movie_name='$movie_name',movie_rating='$movie_rating',movie_ticket_avilable='$movie_ticket_avilable',ticket_price='$ticket_price',ticket_sells='$ticket_sells',movie_poster='$movie_poster',movie_duration='$movie_duration',movie_category='$movie_category' WHERE id=$id";
+    $result = $conn->query($updateSql);
+    return $result;
+   }
+   function updateFood($conn,$table,$id,$food_name,$food_rating,$food_price,$food_desc,$food_image)
+   {
+    $updateSql = "UPDATE $table SET food_name='$food_name',food_rating='$food_rating',food_price='$food_price',food_desc='$food_desc',food_image='$food_image' WHERE id=$id";
     $result = $conn->query($updateSql);
     return $result;
    }

@@ -25,6 +25,59 @@
         header('location:./food_manager_login.php');
     }
     ?>
+     <div class="s1">
+        <div>
+            <h2>Add New Movie</h2>
+        </div>
+        <div>
+            <a class="btn" href="./add_new_food.php">Add Food</a>
+        </div>
+    </div>
+
+    <div class="s1">
+        <h2>Edit And Delete Food</h2>
+    </div>
+    <table id="show3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Food Name</th>
+                <th>Food Rating</th>
+                <th>Food Price</th>
+                <th>Food Description</th>
+                <th>Food Picture</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            include '../connection/connectiondb.php';
+            $mydb = new model();
+            $conObj = $mydb->OpenConn();
+            $result = $mydb->show_food_data($conObj, "food");
+
+
+
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["id"] . "</td>";
+                    echo "<td>" . $row["food_name"] . "</td>";
+                    echo "<td>" . $row["food_rating"] . "</td>";
+                    echo "<td>" . $row["food_price"] . "</td>";
+                    echo "<td>" . $row["food_desc"] . "</td>";
+                    echo '<td><img src="picture/' . $row['food_image'] . '" width="150" height="150" alt="image"></td>';
+                    echo "<td><a class= 'edit_btn' href='../controller/edit_food_info.php?id=". $row['id']. "'>Edit</a></td>";
+                    echo "<td><a class= 'delete_btn' href='../controller/delete_food.php?id=". $row['id']. "'>Delete</a></td>";
+                    echo "</tr>";
+                }
+            }
+            ?>
+        </tbody>
+
+    </table>
 </body>
 
 </html>
